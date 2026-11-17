@@ -1,0 +1,43 @@
+{
+  "CLK": "clock",
+  "inputRows": [
+    {
+      "signal": "reset",
+      "pins": [
+        "SW00"
+      ]
+    },
+    {
+      "signal": "reg_index",
+      "pins": [
+        "INPUT0"
+      ]
+    }
+  ],
+  "outputRows": [
+    {
+      "signal": "pc",
+      "pins": [
+        "OUTPUT0"
+      ]
+    },
+    {
+      "signal": "instruction",
+      "pins": [
+        "OUTPUT1"
+      ]
+    },
+    {
+      "signal": "register_value",
+      "pins": [
+        "OUTPUT2"
+      ]
+    },
+    {
+      "signal": "reg_write",
+      "pins": [
+        "L00"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "CLK": "clock",
+  "inputRows": [
+    {
+      "signal": "A",
+      "pins": [
+        "INPUT0"
+      ]
+    },
+    {
+      "signal": "B",
+      "pins": [
+        "INPUT1"
+      ]
+    },
+    {
+      "signal": "operation",
+      "pins": [
+        "INPUT2"
+      ]
+    }
+  ],
+  "outputRows": [
+    {
+      "signal": "result",
+      "pins": [
+        "OUTPUT0"
+      ]
+    },
+    {
+      "signal": "operation_used",
+      "pins": [
+        "OUTPUT1"
+      ]
+    },
+    {
+      "signal": "ZF",
+      "pins": [
+        "L00"
+      ]
+    },
+    {
+      "signal": "OF",
+      "pins": [
+        "L01"
+      ]
+    }
+  ]
+}

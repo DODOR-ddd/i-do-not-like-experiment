@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+
+# macOS / Office junk
+.DS_Store
+.~*
+
+# Build artifacts
+bin/
+obj/
+
+# Datasets (FashionMNIST, re-downloadable by src code)
+人工智能实验/data/
+
+# Course knowledge materials: handout PDFs, slides, specs, templates, platform examples
+计算机组成实验/**/*.pptx
+计算机组成实验/**/*.pdf
+计算机组成实验/**/虚拟版卡平台示例文件/
+
+# PII: original report files named with student ID (sanitized copies committed instead)
+密码学实验/caesar/25*

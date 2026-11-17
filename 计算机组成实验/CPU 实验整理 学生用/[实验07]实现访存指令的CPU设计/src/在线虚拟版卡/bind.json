@@ -1,0 +1,67 @@
+{
+  "CLK": "clock",
+  "inputRows": [
+    {
+      "signal": "reset",
+      "pins": [
+        "SW00"
+      ]
+    },
+    {
+      "signal": "reg_index",
+      "pins": [
+        "INPUT0"
+      ]
+    },
+    {
+      "signal": "mem_index",
+      "pins": [
+        "INPUT1"
+      ]
+    }
+  ],
+  "outputRows": [
+    {
+      "signal": "pc",
+      "pins": [
+        "OUTPUT0"
+      ]
+    },
+    {
+      "signal": "instruction",
+      "pins": [
+        "OUTPUT1"
+      ]
+    },
+    {
+      "signal": "register_value",
+      "pins": [
+        "OUTPUT2"
+      ]
+    },
+    {
+      "signal": "memory_value",
+      "pins": [
+        "OUTPUT4"
+      ]
+    },
+    {
+      "signal": "memory_address",
+      "pins": [
+        "OUTPUT5"
+      ]
+    },
+    {
+      "signal": "reg_write",
+      "pins": [
+        "L00"
+      ]
+    },
+    {
+      "signal": "mem_write",
+      "pins": [
+        "L01"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "CLK": "clock",
+  "inputRows": [
+    {
+      "signal": "reset",
+      "pins": [
+        "SW00"
+      ]
+    },
+    {
+      "signal": "reg_wen",
+      "pins": [
+        "SW01"
+      ]
+    },
+    {
+      "signal": "read_addr1",
+      "pins": [
+        "INPUT0"
+      ]
+    },
+    {
+      "signal": "read_addr2",
+      "pins": [
+        "INPUT1"
+      ]
+    },
+    {
+      "signal": "write_addr",
+      "pins": [
+        "INPUT2"
+      ]
+    },
+    {
+      "signal": "write_data",
+      "pins": [
+        "INPUT3"
+      ]
+    }
+  ],
+  "outputRows": [
+    {
+      "signal": "read_data1",
+      "pins": [
+        "OUTPUT0"
+      ]
+    },
+    {
+      "signal": "read_data2",
+      "pins": [
+        "OUTPUT1"
+      ]
+    },
+    {
+      "signal": "write_addr_used",
+      "pins": [
+        "OUTPUT2"
+      ]
+    },
+    {
+      "signal": "write_enabled",
+      "pins": [
+        "L00"
+      ]
+    }
+  ]
+}
