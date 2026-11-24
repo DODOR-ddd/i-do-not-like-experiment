@@ -1,4 +1,3 @@
-
 #include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,15 +8,12 @@
 #define INFEASIBLE -1
 #define OVERFLOW -2
 #define MAXSIZE 100
-
-typedef int ElemType;  //声明ElemType的类型
-typedef int Status;  //声明函数类型名
+typedef int ElemType;
+typedef int Status;
 typedef struct SqList {
-        ElemType *elem;  //顺序表数据存储空间基址
+        ElemType *elem;
         int length;
-}SqList;// LIST为用户定义的线性表类型
-
-//1
+}SqList;
 Status InitList(SqList &L)
 {
     L.elem = new ElemType[MAXSIZE];
@@ -26,18 +22,15 @@ Status InitList(SqList &L)
     L.length = 0;
     return OK;
 }
-
 Status ClearList(SqList &L)
 {
     L.length = 0;
     return OK;
 }
-
 int Listlength(SqList L)
 {
     return L.length;
 }
-
 Status GetElem(SqList L, int i, ElemType &e)
 {
     if (i < 1 || i > L.length)
@@ -45,7 +38,6 @@ Status GetElem(SqList L, int i, ElemType &e)
     e = L.elem[i - 1];
     return OK;
 }
-
 int LocateList(SqList L, ElemType e)
 {
     int i;
@@ -54,7 +46,6 @@ int LocateList(SqList L, ElemType e)
             return i + 1;
     return 0;
 }
-
 Status ListInsert(SqList &L, int i, ElemType e)
 {
     int j;
@@ -68,7 +59,6 @@ Status ListInsert(SqList &L, int i, ElemType e)
     L.length++;
     return OK;
 }
-
 Status ListDelete(SqList &L, int i, ElemType &e)
 {
     int j;
@@ -80,7 +70,6 @@ Status ListDelete(SqList &L, int i, ElemType &e)
     L.length--;
     return OK;
 }
-
 Status ListTraverse(SqList L)
 {
     int i;
@@ -89,8 +78,6 @@ Status ListTraverse(SqList L)
     printf("\n");
     return OK;
 }
-
-//2
 Status Union(SqList &La, SqList Lb)
 {
     ElemType e;
@@ -102,7 +89,6 @@ Status Union(SqList &La, SqList Lb)
     }
     return OK;
 }
-
 Status Intersection(SqList &La, SqList Lb)
 {
     ElemType e;
@@ -116,7 +102,6 @@ Status Intersection(SqList &La, SqList Lb)
     }
     return OK;
 }
-
 Status Difference(SqList &La, SqList Lb)
 {
     ElemType e;
@@ -130,7 +115,6 @@ Status Difference(SqList &La, SqList Lb)
     }
     return OK;
 }
-
 Status CreateList(SqList &L, ElemType a[], int n)
 {
     int i;
@@ -139,12 +123,10 @@ Status CreateList(SqList &L, ElemType a[], int n)
         ListInsert(L, Listlength(L) + 1, a[i]);
     return OK;
 }
-
 Status MergeList(SqList La, SqList Lb, SqList &Lc)
 {
     ElemType ea, eb;
     int i = 1, j = 1;
-
     InitList(Lc);
     while (i <= Listlength(La) && j <= Listlength(Lb)) {
         GetElem(La, i, ea);
@@ -169,7 +151,6 @@ Status MergeList(SqList La, SqList Lb, SqList &Lc)
     }
     return OK;
 }
-
 Status Purge(SqList &Lc)
 {
     ElemType ei, e;
@@ -188,8 +169,6 @@ Status Purge(SqList &Lc)
     }
     return OK;
 }
-
-//3
 int main()
 {
     SqList LA, LB, LC;
@@ -197,41 +176,32 @@ int main()
     ElemType a[] = {2, 8, 27, 39, 66, 77, 89};
     ElemType b[] = {6, 18, 27, 59, 65, 77, 89, 120, 140};
     int na = 7, nb = 9;
-
     InitList(LA);
     InitList(LB);
-
     CreateList(LA, a, na);
     CreateList(LB, b, nb);
     printf("初始：\nLA = ");
     ListTraverse(LA);
     printf("LB = ");
     ListTraverse(LB);
-
-
     Union(LA, LB);
     printf("\n并运算 La=La U Lb：\nLA = ");
     ListTraverse(LA);
-
     CreateList(LA, a, na);
     Intersection(LA, LB);
     printf("\n交运算 La=La ∩ Lb：\nLA = ");
     ListTraverse(LA);
-
     CreateList(LA, a, na);
     Difference(LA, LB);
     printf("\n差运算 La=La - Lb：\nLA = ");
     ListTraverse(LA);
-
     CreateList(LA, a, na);
     MergeList(LA, LB, LC);
     printf("\n有序合并 Lc=La+Lb：\nLC = ");
     ListTraverse(LC);
-
     Purge(LC);
     printf("\n去掉重复元素后：\nLC = ");
     ListTraverse(LC);
-
     delete[] LA.elem;
     delete[] LB.elem;
     delete[] LC.elem;
