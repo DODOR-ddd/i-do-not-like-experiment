@@ -19,7 +19,7 @@ typedef struct LNode {      /* 结点类型定义 */
 
 /* ---------- 2. 单链表基本操作 ---------- */
 
-/* (1) 初始化：申请头结点，next 置空，得到空表。你文件里这段已经写对了 */
+/* (1) 初始化：申请头结点，next 置空，得到空表 */
 Status InitList(LinkList &L)
 {
     L = (LinkList)malloc(sizeof(LNode));
